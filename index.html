@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+      }
+      .toolbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 25px;
+        text-align: center;
+        user-select: none;
+      }
+      #canvas-div {
+        position: absolute;
+        top: 25px;
+        width: 100%;
+        height: calc(100% - 25px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button type="button" id="clear">CLEAR</button>
+      <input type="radio" name="shape" value="line" checked="true">line
+      <input type="radio" name="shape" value="propeller">propeller
+
+      <label>||--- Color: </label>
+      <input type="radio" name="color" value="white">white
+      <input type="radio" name="color" value="black" checked="true">black
+      <input type="radio" name="color" value="grey">grey
+
+      <label>||--- Size</label>
+      <input type="radio" name="size" value="2">small
+      <input type="radio" name="size" value="5" checked="true">normal
+      <input type="radio" name="size" value="10">large
+
+    </div>
+    <div id="canvas-div">
+      <canvas id="canvas"></canvas>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
